@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTodoItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvSumPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etProductTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Название"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/etProductPrice"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSumPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сумма: 0 руб."
+        android:textFontWeight="800"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRemoveProducts"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etProductPrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="Цена"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddProduct" />
+
+    <Button
+        android:id="@+id/btnAddProduct"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Добавить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnRemoveProducts"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="120dp"
+
+        android:layout_height="wrap_content"
+        android:text="Удалить"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddProduct"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
